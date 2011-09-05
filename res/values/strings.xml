@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="app_name">MyKeyStore</string>
+	<string name="valider">Valider</string>
+	<string name="abandon">Abandon</string>
+	<string name="ouvrir_navigateur">Ouvrir navigateur</string>
+	<string name="categorie_general_titre">Général</string>
+	<string name="preferences">Preferences</string>
+	<string name="preferences_titre">Préférences</string>
+	<string name="preferences_sauvepassephrase">Sauvegarde passephrase</string>
+	<string name="preferences_passephrase">Passephrase</string>
+	<string name="passephrase_clestore">Entrez passphrase du magasin de clés ?</string>
+	<string name="passephrase_cleprivee">Entrez passphrase de la clé privée ?</string>
+	<string name="urlweb">http://code.google.com/p/keystoremanager/</string>
+	<string name="apropos">A propos</string>
+	<string name="quitter">Quitter</string>
+	<string name="add">ajout</string>
+	<string name="aide">Aide</string>
+	<string name="abort_sign">Impossible de signer avec les données fournies</string>
+	<string name="abort_verify">Impossible de verifier la signature avec les données fournies</string>
+	<string name="abort_encrypt">Impossible de crypter avec les données fournies</string>
+	<string name="abort_decrypt">Impossible de decrypter avec les données fournies</string>
+
+	<string name="add_certificat">Ajout Certificat</string>
+	<string name="add_key">Ajout clé</string>
+	<string name="generate_key">Génération clé</string>
+	<string name="delete">Suppression</string>
+	<string name="info">Info</string>
+	<string name="keysize">Taille de la clé</string>
+	<string name="alias">Nom</string>
+	<string name="generate">Generer</string>
+	<string name="unknow">inconnu</string>
+	<string name="password">Mot de passe:</string>
+	<string name="confirm_password">Confirmer mot de passe:</string>
+	
+	<!-- certificate x509 -->
+	<string name="validity">Validité (jour)</string>
+	<string name="commonName">Nom commun (CN)</string>
+	<string name="organizationalUnit">Departement (OU)</string>
+	<string name="organization">Societé (O)</string>
+	<string name="locality">Localité (L)</string>
+	<string name="state">Pays (S)</string>
+	<string name="country">Region (C)</string>
+	<!-- end of certificate -->
+	
+	<string name="successful_generate_key">Géneration de clé réussie</string>
+	<string name="failure_generate_key">Echec lors de la génération de la clé</string>
+	<string name="failure_confirm_password">Erreur sur confirmation du mot de passe de la clé</string>
+	<string name="failure_loading_keystore">Echec lors du chargement du magasin de clés</string>
+	
+	<string-array name="keytypes">
+		<item name="rsa">RSA</item>
+		<item name="dsa">DSA</item>
+		<!-- <item name="ec">EC</item> -->
+	</string-array> 
+	
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<PreferenceCategory android:title="@string/categorie_general_titre">
+		<CheckBoxPreference
+			android:key="sauvepassephrase"
+			android:defaultValue="false"
+			android:title="@string/preferences_sauvepassephrase"/>
+		<EditTextPreference
+			android:key="passephrase"
+			android:defaultValue=""
+			android:password="true"
+			android:title="@string/preferences_passephrase"/>
+	</PreferenceCategory>
+
+	</PreferenceScreen>

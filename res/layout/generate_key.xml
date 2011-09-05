@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent" >
+	
+	<ScrollView android:id="@+id/ScrollView01" 
+				android:layout_height="wrap_content" 
+				android:layout_width="fill_parent"
+	>
+
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:orientation="vertical"
+			android:layout_height="wrap_content" 
+			android:layout_width="fill_parent"
+		>
+
+			<Spinner android:id="@+id/keytype_spinner"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+			/>
+			
+			<!-- key alias -->
+			<TextView
+				android:id="@+id/alias_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/alias"
+			/>
+			
+			<EditText
+				android:id="@+id/alias"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="text"
+			/>
+
+			<!-- key size -->
+			<TextView
+				android:id="@+id/keysize_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/keysize"
+			/>
+			
+			<EditText
+				android:id="@+id/size"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="number"
+			/>
+
+			<!-- key password -->
+			<TextView
+				android:id="@+id/keypassword_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/password"
+			/>
+			
+			<EditText
+				android:id="@+id/keypassword"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="textPassword"
+			/>
+
+			<!-- confirm key password -->
+			<TextView
+				android:id="@+id/confirm_keypassword_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/confirm_password"
+			/>
+			
+			<EditText
+				android:id="@+id/confirm_keypassword"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="textPassword"
+			/>
+
+			<!-- validity -->
+			<TextView
+				android:id="@+id/validity_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/validity"
+			/>
+			
+			<EditText
+				android:id="@+id/validity"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="number"
+				android:text="365"
+			/>
+
+			<!-- common name CN -->
+			<TextView
+				android:id="@+id/commonName_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/commonName"
+			/>
+			
+			<EditText
+				android:id="@+id/commonName"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="text"
+				android:text="@string/unknow"
+			/>
+
+			<!-- organizational unit OU -->
+			<TextView
+				android:id="@+id/organizationalUnit_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/organizationalUnit"
+			/>
+			
+			<EditText
+				android:id="@+id/organizationalUnit"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="text"
+				android:text="@string/unknow"
+			/>
+
+			<!-- organization O -->
+			<TextView
+				android:id="@+id/organization_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/organization"
+			/>
+			
+			<EditText
+				android:id="@+id/organization"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="text"
+				android:text="@string/unknow"
+			/>
+
+			<!-- locality L -->
+			<TextView
+				android:id="@+id/locality_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/locality"
+			/>
+			
+			<EditText
+				android:id="@+id/locality"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="text"
+				android:text="@string/unknow"
+			/>
+
+			<!-- state S -->
+			<TextView
+				android:id="@+id/state_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/state"
+			/>
+			
+			<EditText
+				android:id="@+id/state"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="text"
+				android:text="@string/unknow"
+			/>
+
+			<!-- country C -->
+			<TextView
+				android:id="@+id/country_texte"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:text="@string/country"
+			/>
+			
+			<EditText
+				android:id="@+id/country"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:inputType="text"
+				android:text="@string/unknow"
+			/>
+
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:orientation="horizontal"
+				android:gravity="center"
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent" >
+
+				<Button
+					android:id="@+id/cancel"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/abandon" 
+				/>
+
+				<Button
+					android:id="@+id/ok"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/generate" 
+				/>
+				
+			</LinearLayout>
+			
+		</LinearLayout>
+		
+	</ScrollView>
+	
+</LinearLayout>
+
