@@ -16,8 +16,6 @@ package com.android.keystore;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Handler;
-import android.util.Log;
 import android.content.Intent;
 import android.widget.TextView;
 import android.widget.Button;
@@ -37,7 +35,6 @@ public class TextViewActivity extends Activity
 
 		Button closeButton = (Button) findViewById(R.id.close);
 		closeButton.setOnClickListener(new OnClickListener() {
-			@Override
 			public void onClick(View v) {
 				finish();
 			}

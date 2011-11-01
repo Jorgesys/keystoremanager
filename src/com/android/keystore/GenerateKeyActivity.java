@@ -17,10 +17,9 @@
 package com.android.keystore;
 
 import android.app.Activity;
-import android.app.Dialog;
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.util.Log;
@@ -431,8 +430,7 @@ public class GenerateKeyActivity extends Activity
 		return cf.generateCertificate(new ByteArrayInputStream(r));
 	}
 
-	private class OKListener implements android.view.View.OnClickListener {
-		@Override
+	private class OKListener implements OnClickListener {
 		public void onClick(View v) {
 			
 			try
@@ -488,8 +486,7 @@ public class GenerateKeyActivity extends Activity
 		}
 	}
 
-	private class CancelListener implements android.view.View.OnClickListener {
-		@Override
+	private class CancelListener implements OnClickListener {
 		public void onClick(View v) {
 			finish();
 		}

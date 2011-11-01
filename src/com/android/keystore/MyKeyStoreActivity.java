@@ -163,7 +163,6 @@ public class MyKeyStoreActivity extends ListActivity
 	private EditText input;
 	
 	private class UpdateView implements UpdateListener {
-		@Override
 		public void update() {
 			initView();
 		}
