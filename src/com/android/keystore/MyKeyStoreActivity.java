@@ -18,7 +18,6 @@ package com.android.keystore;
 
 import android.app.Dialog;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.app.ListActivity;
 import android.os.Bundle;
 import android.os.Environment;
@@ -27,6 +26,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -44,8 +44,6 @@ import android.widget.EditText;
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
-import android.webkit.WebView;
-
 import java.security.*;
 import java.io.*;
 import java.util.*;
@@ -128,13 +126,6 @@ public class MyKeyStoreActivity extends ListActivity
 
 	public static final String MYKEYSTORENAME = "MyKeyStore.bks";
 	
-	// Menus
-	private static final int SETTINGS_ID = 1;
-	private static final int ADD_ID = SETTINGS_ID + 1;
-	private static final int HELP_ID = ADD_ID + 1;
-	private static final int ABOUT_ID = HELP_ID + 1;
-	private static final int QUIT_ID = ABOUT_ID + 1;
-
 	// Dialogs
 	private static final int ADD_DIALOG = 0;
 	private String[] itemsAdd;
@@ -454,17 +445,8 @@ public class MyKeyStoreActivity extends ListActivity
 	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		super.onCreateOptionsMenu(menu);
-		menu.add(0, SETTINGS_ID, 0, R.string.preferences)
-			.setIcon(android.R.drawable.ic_menu_preferences);
-		menu.add(0, ADD_ID, 0, R.string.add)
-			.setIcon(android.R.drawable.ic_menu_add);
-		menu.add(0, HELP_ID, 0, R.string.aide)
-			.setIcon(android.R.drawable.ic_menu_help);
-		menu.add(0, ABOUT_ID, 0, R.string.apropos)
-			.setIcon(android.R.drawable.ic_menu_info_details);
-		menu.add(0, QUIT_ID, 0, R.string.quitter)
-			.setIcon(android.R.drawable.ic_menu_close_clear_cancel);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.main, menu);
 		return true;
 	}
 
@@ -591,23 +573,23 @@ public class MyKeyStoreActivity extends ListActivity
 	public boolean onOptionsItemSelected(MenuItem item) {
 		Intent intent;
 		switch (item.getItemId()) {
-			case SETTINGS_ID:
+			case R.id.main_menu_options:
 				intent = new Intent(Intent.ACTION_VIEW);
 				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
 				intent.setClassName(this, PreferencesActivity.class.getName());
 				startActivity(intent);
 				return true;
-			case ADD_ID:
+			case R.id.main_menu_add:
 				showDialog(ADD_DIALOG);
 				return true;
-			case HELP_ID:
+			case R.id.main_menu_help:
 				intent = new Intent(Intent.ACTION_VIEW);
 				intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
 				intent.setClassName(this, WebViewActivity.class.getName());
 				intent.setData(Uri.parse("file:///android_asset/html/help/index.html"));
 				startActivity(intent);
 				return true;
-			case ABOUT_ID:
+			case R.id.main_menu_about:
 				AlertDialog.Builder builder = new AlertDialog.Builder(this);
 				builder.setTitle(getString(R.string.app_name));
 				builder.setMessage(getString(R.string.apropos) + "\n\n" + getString(R.string.urlweb));
@@ -616,11 +598,11 @@ public class MyKeyStoreActivity extends ListActivity
 				builder.setNegativeButton(R.string.abandon, null);
 				builder.show();
 				return true;
-			case QUIT_ID:
+			case R.id.main_menu_quit:
 				finish();
 				return true;
 			default:
-				return false;
+				return super.onOptionsItemSelected(item);
 		}
 	}
 
